@@ -11,9 +11,15 @@ class HelloWorld extends Component {
   }
 
   toggleColor() {
-    this.setState({
-      color: "yellow"
-    });
+    if (this.state.color === "hotpink") {
+      this.setState({
+        color: "yellow"
+      });
+    } else {
+      this.setState({
+        color: "hotpink"
+      });
+    }
   }
 
   render() {
