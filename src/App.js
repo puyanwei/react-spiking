@@ -22,6 +22,12 @@ class HelloWorld extends Component {
     }
   }
 
+  changeColor(event) {
+    this.setState({
+      color: event.target.value
+    });
+  }
+
   render() {
     const styleObj = {
       backgroundColor: this.state.color
@@ -30,7 +36,10 @@ class HelloWorld extends Component {
     return (
       <div className="App" style={styleObj} id="hello-world">
         <h2 onClick={this.toggleColor.bind(this)}>Hello {this.state.color}</h2>
-        <h2>This is a section of the component</h2>
+        <input
+          value={this.state.color}
+          onChange={this.changeColor.bind(this)}
+        />
       </div>
     );
   }
