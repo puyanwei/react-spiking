@@ -11,4 +11,9 @@ The tutorial looks at four things to start out;
 3. className - The keyword Class is reserved for React, so to avoid confusion in for this tag className is used instead.
 4. state
 
+### Installation
+
+`git clone git@github.com:puyanwei/react-spiking.git`
+`cd react-spiking`
+
 I may adopt other tutorials and or add my own things later.
