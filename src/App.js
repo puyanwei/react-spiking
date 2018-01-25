@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 
+const colorArr = ["red", "blue", "green", "yellow", "grey", "orange", "violet"];
+
 class HelloWorld extends Component {
   constructor(props) {
     super(props);
@@ -8,6 +10,23 @@ class HelloWorld extends Component {
     this.state = {
       color: "hotpink"
     };
+  }
+
+  componentDidMount() {
+    let colorPos = 0;
+    setInterval(() => {
+      if (colorArr.length - 1 > colorPos) {
+        this.setState({
+          color: colorArr[colorPos]
+        });
+        colorPos++;
+      } else {
+        this.setState({
+          color: colorArr[colorPos]
+        });
+        colorPos = 0;
+      }
+    }, 700);
   }
 
   toggleColor() {
