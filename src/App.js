@@ -24,7 +24,7 @@ class HelloWorld extends Component {
 
   render() {
     const styleObj = {
-      backgroundColor: "red"
+      backgroundColor: this.state.color
     };
 
     return (
